@@ -17,7 +17,8 @@ app.get('/:id', (req, res) => {
     .then(response => {
       const data = response.list
       const dataByDays = data.reduce((sum, item) => {
-        const { temp_min: min, temp_max: max } = item.main
+        const min = item.main.temp_min
+        const max = item.main.temp_max
         sum[new Date(item.dt * 1000)] = `${(min - kelvinConst).toPrecision(3)}°C - ${(max - kelvinConst).toPrecision(3)}°C`
         return sum
       }, {
