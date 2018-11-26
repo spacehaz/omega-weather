@@ -1,0 +1,11 @@
+{
+  "name": "omega-weather",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/spacehaz/omega-weather.git",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  }
+}
